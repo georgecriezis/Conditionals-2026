@@ -2,6 +2,7 @@
 purchase_amount = float(input("Enter the purchase amount: "))
 membership_status = input("Are you a member? (yes/no): ").strip().lower()
 
+# conditional membership status determinants
 if membership_status == "yes":
     if purchase_amount >= 100:
         discount = 0.15
@@ -12,7 +13,10 @@ if membership_status == "no":
         discount = 0.10
     else:
         discount = 0.0
+# after detremining your discount, find out the real value 
+
 discount_amount = purchase_amount * discount
 final_price = purchase_amount - discount_amount
+
 print(f'Discount applied: {discount * 100:.0f}%')
 print(f'Final price: ${final_price:.2f}')
