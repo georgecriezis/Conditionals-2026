@@ -2,6 +2,7 @@
 annual = float(input("What's your annual salary? "))
 performance_score = float(input("What's your performance score (0-100)? "))
 
+# condiitonal statements to determine bonus
 if performance_score >=90:
     bonus = 0.20
 elif performance_score >= 80:
@@ -13,4 +14,5 @@ else:
 
 bonus_amount = annual * bonus
 print(f'Performance bonus: {bonus * 100:.0f}%')
+
 print(f'Bonus amount: ${bonus_amount:.2f}')
